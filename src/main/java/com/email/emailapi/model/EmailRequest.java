@@ -1,8 +1,7 @@
 package com.email.emailapi.model;
 
-import java.util.Arrays;
 
-import javax.persistence.Lob;
+
 
 public class EmailRequest {
 	private String to;

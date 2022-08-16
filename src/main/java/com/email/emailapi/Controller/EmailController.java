@@ -1,16 +1,11 @@
 package com.email.emailapi.Controller;
 
-
-import javax.mail.MessagingException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.email.emailapi.Service.EmailService;
@@ -41,14 +36,6 @@ public class EmailController {
 	   
    }
 
-	@PostMapping(value = "/sendMailWithAttachment")
-	public void sendMailWithAttachment(@RequestParam("to") String to,
-			@RequestParam("subject") String subject,
-			@RequestParam("message") String message,
-			@RequestParam("from") String from,
-			@RequestParam("file") String attachment
-			) throws MessagingException {
-		emailService.sendMailWithAttachment(to, message, subject,attachment);
-	}
+
 	
 }
