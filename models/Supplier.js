@@ -1,5 +1,11 @@
 module.exports = (sequelize, Datatype) => {
   const Supplier = sequelize.define("Supplier", {
+    emailVerfyed: {
+      type: Datatype.STRING,
+    },
+    accountType: {
+      type: Datatype.STRING,
+    },
     auth_status: {
       type: Datatype.STRING,
     },
